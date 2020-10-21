@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{702FFBD8-70BC-4811-AFC2-D474CD81A594}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MonopolyV1</RootNamespace>
+    <AssemblyName>MonopolyV1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Monopoly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monopoly.Designer.cs">
+      <DependentUpon>Monopoly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Monopoly.resx">
+      <DependentUpon>Monopoly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bond Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bow Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chance [Back].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chance 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chance 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chance 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chest [Back].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Community Chest 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Community Chest 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Community Chest 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coventry Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electric Company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Euston Road.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fenchurch St Station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleet Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Free Parking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go To Jail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Income Tax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jail and Visiting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kings Cross Station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leicester Square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liverpool St Station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marlborough Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marylebone Station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mayfair[Board].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Northumberland Avenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Old Kent Road.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxford Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pall Mall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Park Lane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pentonville Road.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picadilly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regent Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Super Tax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Angel Islington.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trafalgar Square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vine Street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Water Works.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Whitechapel Road.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Whitehall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monopoly_board.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\token1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\token2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\token3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\token4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utility1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utility2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chance Active [Back].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceBank50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceCrossword100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceFunding150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceGoBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceJail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceJailFree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceLoitering20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceMaryleboneStation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceMayfair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chancePallMall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceSchoolFees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceSpeeding15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceTrafalgarSq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceTrafalgarSq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chest10FineChance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestAnnuity100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestBankError200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestBeautyContest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestBirthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestDoctorFine50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestHospitalFine100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestInherit100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestInsuranceFine50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestJail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestJailFree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestOldKentRoad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestShares25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestStock50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chestTaxRefund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chest Active [Back].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow5.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
